@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: kaung007/nginx-demo:de27e16b
+          image: kaung007/nginx-demo:83989fc5
           ports:
             - name: http
               containerPort: 80
