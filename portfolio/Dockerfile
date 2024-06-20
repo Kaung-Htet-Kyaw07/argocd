@@ -6,7 +6,7 @@ RUN rm -rf /etc/nginx/nginx.conf
 COPY ./portfolio/nginx.conf /etc/nginx/
 
 # Copy website content to Nginx's HTML directory
-RUN rm -rf /usr/share/nginx/html*
+RUN rm -rf /usr/share/nginx/html/*
 COPY ./portfolio/website /usr/share/nginx/html
 
 # Expose port 80 to the outside world
