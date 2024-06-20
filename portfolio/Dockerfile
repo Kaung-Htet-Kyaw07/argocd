@@ -6,7 +6,7 @@ COPY ./portfolio/nginx.conf /etc/nginx/nginx.conf
 
 # Copy website content to Nginx's HTML directory
 
-COPY ./portfolio/website /usr/share/nginx/html
+COPY ./portfolio/website/ /usr/share/nginx/html/
 
 # Expose port 80 to the outside world
 EXPOSE 80
