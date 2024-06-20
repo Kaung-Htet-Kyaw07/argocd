@@ -6,6 +6,7 @@ RUN rm -rf /etc/nginx/sites-enabled/default
 COPY ./portfolio/nginx.conf /etc/nginx/sites-enabled/
 
 # Copy website content to Nginx's HTML directory
+RUN rm -rf /var/www/html/*
 COPY ./portfolio/website /var/www/html/
 
 # Expose port 80 to the outside world
