@@ -1,4 +1,7 @@
+# Use the official Nginx image from the Docker Hub
 FROM nginx:latest
 
-RUN echo "Hello from nginx: v1" > /usr/share/nginx/html/index.html   
-RUN echo "Add: feature 3 " >> /usr/share/nginx/html/index.html   
+
+
+
+RUN echo "Hello from nginx: v4" > /usr/share/nginx/html/index.html 
