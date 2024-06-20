@@ -2,8 +2,8 @@
 FROM nginx:stable
 
 # Copy custom configuration file from the current directory
-RUN rm -rf /etc/nginx/sites-enabled/default
-COPY ./portfolio/nginx.conf /etc/nginx/sites-enabled/
+RUN rm -rf /etc/nginx/nginx.conf
+COPY ./portfolio/nginx.conf /etc/nginx/
 
 # Copy website content to Nginx's HTML directory
 RUN rm -rf /usr/share/nginx/html*
