@@ -2,11 +2,11 @@
 FROM nginx:stable
 
 # Copy custom configuration file from the current directory
-COPY ./portfolio/nginx.conf /etc/nginx/nginx.conf
+ADD ./portfolio/nginx.conf /etc/nginx/nginx.conf
 
 # Copy website content to Nginx's HTML directory
 
-COPY ./portfolio/website/ /usr/share/nginx/html/
+ADD ./portfolio/website/ /usr/share/nginx/html/
 
 # Expose port 80 to the outside world
 EXPOSE 80
