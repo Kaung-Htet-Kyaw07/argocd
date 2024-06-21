@@ -1,4 +1,15 @@
-FROM nginx:latest
+# Use the official Nginx image from the Docker Hub
+FROM nginx:stable
 
-RUN echo "Hello from nginx: v1" > /usr/share/nginx/html/index.html   
+# Copy custom configuration file from the current directory
+COPY ./nginx-demo/nginx.conf /etc/nginx/nginx.conf
 
+# Copy website content to Nginx's HTML directory
+
+COPY ./nginx-demo/website /usr/share/nginx/html/
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Nginx when the container has provisioned
+CMD ["nginx", "-g", "daemon off;"]
