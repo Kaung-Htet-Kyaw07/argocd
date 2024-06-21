@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./portfolio/Dockerfile  # Path to the directory containing your Dockerfile
+          file: ./nginx-demo/Dockerfile  # Path to the directory containing your Dockerfile
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ steps.get_sha.outputs.SHA_SHORT }}
 
